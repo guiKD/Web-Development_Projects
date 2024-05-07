@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+:root {
+    --color-white : #fff;
+    --color-pink : #dc143c;
+    --transition: .5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-pink);
+}
+
+
+ul, ol {
+    list-style: none;
+}
+
+
+/* Header Page */
+.header-page {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+}
+
+.header-page h2 {
+    color: var(--color-white);
+    font-size: 5vmin;
+}
+
+.logo {
+    background-color: var(--color-pink);
+    padding: 0 7px;
+    border-radius: 77px 37px 77px 27px;
+}
+
+.header-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    left: 3px;
+    /* animation: arrow .5s infinite; */
+}
+
+
+/* Fim Header Page */
+
+/* Container principal */
+.container {
+    color: var(--color-white);
+    width: 100%;
+    height: 100vh;    
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+.container h1 {
+    color: var(--color-white);
+    font-size: 7vmin;
+    margin-bottom: 20px;
+}
+
+.container p {   
+    width: 60%;
+    font-size: 3vmin;
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: var(--color-white);
+    border: 2px solid var(--color-pink);
+    padding: 7px 25px;
+    background-color: var(--color-pink);
+    border-radius: 70px;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-pink);
+}
+
+.btn:hover .arrow {
+    animation: arrow .5s infinite;
+}
+
+
+.bg-blue {
+    background-color: #050516;
+}
+
+.bg-image-1 {
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)),
+    url(../images/pexels-donald-tong-189296.jpg);
+}
+
+.bg-image-2 {
+    background-image: url(../images/pexels-darrell-fraser-2259226.jpg);
+}
+
+
+.container-card {
+    width: 100%;
+    min-height: 100vh;
+    color: var(--color-white);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-item {
+    margin: 20px 0;
+    width: 40%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 25px #126;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.card-item:hover {
+    transform: scale(1.1);
+}
+
+.card-item img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* animações */
+@keyframes arrow {
+    50% {
+        transform: translateY(7px);
+    }
+    100%{
+        transform: translateY(-7px);
+    }
+    
+}
+
+
+/* pensando no responsivo  */
+@media(max-width:1000px) {
+
+    .card-item {
+        width: 80%;
+    }
+
+}
+
